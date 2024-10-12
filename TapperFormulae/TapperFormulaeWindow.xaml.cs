@@ -22,8 +22,8 @@ namespace TapperFormulae
     /// </summary>
     public partial class TapperFormulaeWindow : Window
     {
-        int width = 106;
-        int height = 17;
+        private int width = 106;
+        private int height = 17;
         public TapperFormulaeWindow()
         {
             InitializeComponent();
@@ -174,7 +174,7 @@ namespace TapperFormulae
             save.Closing += (s,e1) => saveName = (save as Save).NameForSave;
             save.ShowDialog();
 
-            if(saveName != "-5136")
+            if(saveName != "")
             {
                 File.AppendAllText("sample.txt", Environment.NewLine + saveName + ":" + kArgumentTb.Text);
                 MessageBox.Show("Успешное сохранение");

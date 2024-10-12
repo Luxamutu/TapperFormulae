@@ -19,7 +19,7 @@ namespace TapperFormulae
     /// </summary>
     public partial class Save : Window
     {
-        public string NameForSave = "-5136";
+        public string NameForSave = "";
         public Save()
         {
             InitializeComponent();

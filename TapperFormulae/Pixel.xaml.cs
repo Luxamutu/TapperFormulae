@@ -56,17 +56,10 @@ namespace TapperFormulae
             else Background = MainColor;
         }
 
-        public event EventHandler PixelChanged;
-        public delegate void EventHandler(Pixel pixel);
-
         private void PixelMouseDown(object sender, MouseButtonEventArgs e)
         {
-            //PixelChanged?.Invoke(this);
-
             if (IsSelected) paintMode = false;
             else paintMode = true;
-
-
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 if (!IsSelected)
