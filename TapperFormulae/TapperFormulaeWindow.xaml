@@ -1,0 +1,33 @@
+﻿<Window x:Class="TapperFormulae.TapperFormulaeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TapperFormulae"
+        mc:Ignorable="d"
+        Title="Кодировка изображения формулой Таппера" Height="600" Width="1150" Icon="icon.jpg"> 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="5" Background="LightGray" Grid.Row="0" Height="170" Margin="20" Width="1060">
+            <Grid x:Name="grid"/>
+        </Border>
+        <StackPanel  Margin="20,0,20,20" Grid.Row="1">
+            <TextBlock Margin="2,0,0,0" Text="Аргумент k"/>
+            <TextBox KeyDown="kArgumentTb_KeyDown" MaxLength="1090" BorderThickness="0" FontSize="18" TextWrapping="Wrap" x:Name="kArgumentTb" Text="0"/>
+
+        </StackPanel>
+        <StackPanel  Orientation="Horizontal" Margin="20" Grid.Row="2" HorizontalAlignment="Center" >
+            <ComboBox SelectionChanged="sampleCb_SelectionChanged" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Name="sampleCb" MouseEnter="ComboBox_MouseEnter" Width="200" Margin="0,0,20,0"/>
+            <Button FontSize="14" Padding="35,5" Margin="0,0,20,0" Content="Сохранить" Click="Button_Click_3"/>
+            <Button FontSize="14" Padding="35,5" Margin="0,0,20,0" Content="Очистить поле" Click="Button_Click_2"/>
+                                
+            <Button FontSize="14"  Padding="35,5" Margin="0,0,20,0" Content="Преобразовать в картинку" Click="Button_Click"/>
+            <Button FontSize="14"  Padding="35,5"  Content="Преобразовать в аргумент" Click="Button_Click_1"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
