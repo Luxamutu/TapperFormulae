@@ -27,9 +27,7 @@ namespace TapperFormulae
         public TapperFormulaeWindow()
         {
             InitializeComponent();
-
             GridInit();
-
         }
         private BigInteger ToDecimal(string binary)
         {
@@ -76,7 +74,6 @@ namespace TapperFormulae
         }
         public void CalculateToImage()
         {
-            
             GridInit();
             BigInteger k = BigInteger.Parse(kArgumentTb.Text);
 
@@ -144,8 +141,6 @@ namespace TapperFormulae
             var lines = File.ReadAllLines("sample.txt").ToList();
 
             sampleCb.ItemsSource = lines.ToList().Select(x => x.Split(':').First());
-
-
         }
 
         private void sampleCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -183,7 +178,6 @@ namespace TapperFormulae
             {
                 File.AppendAllText("sample.txt", Environment.NewLine + saveName + ":" + kArgumentTb.Text);
                 MessageBox.Show("Успешное сохранение");
-
             }
         }
     }

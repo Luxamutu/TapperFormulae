@@ -18,16 +18,13 @@
         <StackPanel  Margin="20,0,20,20" Grid.Row="1">
             <TextBlock Margin="2,0,0,0" Text="Аргумент k"/>
             <TextBox KeyDown="kArgumentTb_KeyDown" MaxLength="1090" BorderThickness="0" FontSize="18" TextWrapping="Wrap" x:Name="kArgumentTb" Text="0"/>
-
         </StackPanel>
         <StackPanel  Orientation="Horizontal" Margin="20" Grid.Row="2" HorizontalAlignment="Center" >
             <ComboBox SelectionChanged="sampleCb_SelectionChanged" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Name="sampleCb" MouseEnter="ComboBox_MouseEnter" Width="200" Margin="0,0,20,0"/>
             <Button FontSize="14" Padding="35,5" Margin="0,0,20,0" Content="Сохранить" Click="Button_Click_3"/>
             <Button FontSize="14" Padding="35,5" Margin="0,0,20,0" Content="Очистить поле" Click="Button_Click_2"/>
-                                
             <Button FontSize="14"  Padding="35,5" Margin="0,0,20,0" Content="Преобразовать в картинку" Click="Button_Click"/>
             <Button FontSize="14"  Padding="35,5"  Content="Преобразовать в аргумент" Click="Button_Click_1"/>
-
         </StackPanel>
     </Grid>
 </Window>
